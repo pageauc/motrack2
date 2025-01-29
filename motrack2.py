@@ -183,7 +183,7 @@ if __name__ == "__main__":
                 prev_mpoint = motion_xy
                 max_radius = TRACK_INTERVAL_LEN
                 if LOGGING_ON:
-                    logging.info("(%i, %i) Track Start: New",
+                    logging.info("New: (%i, %i) Track Start",
                                  mpoint_start[0], mpoint_start[1])
                 if TRACK_HIST_ON: # Reset Tracking History
                     track_hist = [mpoint_start]
@@ -205,17 +205,17 @@ if __name__ == "__main__":
                     # ignore out of range points and reset start point
                     mpoint_start = mpoint2
                     if LOGGING_ON:
-                        logging.info("  (%i, %i) Track Reset: Radius %i Exceeds %i",
+                        logging.info("  Reset Track: (%i, %i) Radius %i Exceeds %i",
                         mpoint2[0], mpoint2[1], track_length, max_radius)
                     start_track = True
                     continue
                 if track_length > TRACK_TRIG_LEN:
                     # This was a valid track
                     if LOGGING_ON:
-                        logging.info("  (%i, %i) Track End: Length %i GT %i TRACK_TRIG_LEN px",
+                        logging.info("  End Track: (%i, %i) Length %i GT %i TRACK_TRIG_LEN px",
                                      mpoint2[0], mpoint2[1], track_length, TRACK_TRIG_LEN)
                     filename = get_image_name(IM_DIR, IM_PREFIX)
-                    logging.info("Saving %s", filename)
+                    logging.info("  Saving %s", filename)
                     # Resize image before saving ..
                     if CIRCLE_ON:  # Put Circle on last motion xy before saving image
                         if TRACK_HIST_ON:
@@ -238,7 +238,7 @@ if __name__ == "__main__":
                     start_track = True
                 else:
                     if LOGGING_ON:
-                        logging.info("  (%i, %i) Track Len %i px", mpoint2[0], mpoint2[1], track_length)
+                        logging.info("  Track: (%i, %i) Track Len is %i px", mpoint2[0], mpoint2[1], track_length)
 
             if not start_track and timer_end(track_timer_start, TRACK_TIMEOUT_SEC):
                 if LOGGING_ON:
