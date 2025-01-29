@@ -1,9 +1,10 @@
 #!/bin/bash
 echo "motrack2 Install  written by Claude Pageau"
-echo "INFO  : Create motrack Folders ..."
+echo "INFO  : Create motrack2 Folders ..."
 cd ~
 mkdir -p motrack2
 cd motrack2
+mkdir -p media
 
 echo "INFO  : Download Project Files ..."
 wget -O motrack2.py -q --show-progress https://raw.github.com/pageauc/motrack2/master/motrack2.py
@@ -22,13 +23,13 @@ wget -O strmpilegcam.py -q --show-progress https://raw.github.com/pageauc/motrac
 wget -O strmusbipcam.py -q --show-progress https://raw.github.com/pageauc/motrack2/master/strmusbipcam.py
 wget -O strmpilibcam.py -q --show-progress https://raw.github.com/pageauc/motrack2/master/strmpilibcam.py
 wget -O Readme.md -q --show-progress https://raw.github.com/pageauc/motrack2/master/Readme.md
+wget -O media/webserver.txt -q --show-progress https://raw.github.com/pageauc/motrack2/master/webserver.txt
 
 chmod +x motrack2.py webserver.py webserver.sh
 
 echo "INFO  : Install Dependencies ...."
 sudo apt install -yq python3-opencv
-mkdir -p media
-wget -O media/webserver.txt -q --show-progress https://raw.github.com/pageauc/motrack2/master/webserver.txt
+
 echo "
                     INSTRUCTIONS
                     ============
@@ -38,7 +39,7 @@ In SSH or Terminal session
 Edit config.py CAMERA and related settings
 for RPI Legacy, Libcam or RTSP IP Camera per comments
 
-    cd ~/motrack
+    cd ~/motrack2
     ./motrack2.py
 
 EDIT SETTINGS
