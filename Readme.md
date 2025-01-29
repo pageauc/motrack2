@@ -66,7 +66,7 @@ Then execute motrack.py in same terminal session per above.
 
     ./webserver.sh start
 
-Access webserver with a web browser at provided URL and port  eg http://192.168.1.128:8080 or http://rpiname.local:8080
+Access webserver with a web browser at provided URL and port  eg http://192.168.1.128:8090 or http://rpiname.local:8090
 
 ## More Info See
 
