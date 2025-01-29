@@ -205,7 +205,7 @@ if __name__ == "__main__":
                     # ignore out of range points and reset start point
                     mpoint_start = mpoint2
                     if LOGGING_ON:
-                        logging.info("(%i, %i) Track Reset: Radius %i Exceeds %i",
+                        logging.info("  (%i, %i) Track Reset: Radius %i Exceeds %i",
                         mpoint2[0], mpoint2[1], track_length, max_radius)
                     start_track = True
                     continue
@@ -238,11 +238,11 @@ if __name__ == "__main__":
                     start_track = True
                 else:
                     if LOGGING_ON:
-                        logging.info("(%i, %i) Track Len %i px", mpoint2[0], mpoint2[1], track_length)
+                        logging.info("  (%i, %i) Track Len %i px", mpoint2[0], mpoint2[1], track_length)
 
             if not start_track and timer_end(track_timer_start, TRACK_TIMEOUT_SEC):
                 if LOGGING_ON:
-                    logging.info("Track Timeout: GT %i TRACK_TIMEOUT_SEC",
+                    logging.info("  Track Timeout: GT %i TRACK_TIMEOUT_SEC",
                                  TRACK_TIMEOUT_SEC)
                 start_track = True
 
