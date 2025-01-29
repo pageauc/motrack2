@@ -212,7 +212,7 @@ if __name__ == "__main__":
                 if track_length > TRACK_TRIG_LEN:
                     # This was a valid track
                     if LOGGING_ON:
-                        logging.info("(%i, %i) Track End: Length %i GT %i TRACK_TRIG_LEN px",
+                        logging.info("  (%i, %i) Track End: Length %i GT %i TRACK_TRIG_LEN px",
                                      mpoint2[0], mpoint2[1], track_length, TRACK_TRIG_LEN)
                     filename = get_image_name(IM_DIR, IM_PREFIX)
                     logging.info("Saving %s", filename)
