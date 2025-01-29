@@ -11,8 +11,8 @@ SHOW_SETTINGS_ON = False   # Display settings on launch
 # Camera Settings See configcam.py
 #======================================
 CAMERA = "pilibcam"   # valid values usbcam, rtspcam, pilibcam, pilegcam
-USBCAM_SRC = 0
-RTSPCAM_SRC = "rtsp://user:password@IP:554/path"
+USBCAM_SRC = 0        # 0 = Default  If RPI camera installed, try 1
+RTSPCAM_SRC = "rtsp://user:password@IP:554/path" # Check your cam docks for RTSP URL string
 
 IM_SIZE = (640, 480)
 IM_VFLIP = True

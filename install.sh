@@ -10,20 +10,18 @@ echo "INFO  : Download Project Files ..."
 wget -O motrack2.py -q --show-progress https://raw.github.com/pageauc/motrack2/master/motrack2.py
 wget -O webserver.py -q --show-progress https://raw.github.com/pageauc/motrack2/master/webserver.py
 wget -O webserver.sh -q --show-progress https://raw.github.com/pageauc/motrack2/master/webserver.sh
-
-if [ -f config.py ]; then     # check if local file exists.
-    wget -O config.py.new -q --show-progress https://raw.github.com/pageauc/motrack2/master/config.py
-else
-    wget -O config.py -q --show-progress https://raw.github.com/pageauc/motrack2/master/config.py
-fi
-
-
 wget -O strmcam.py -q --show-progress https://raw.github.com/pageauc/motrack2/master/strmcam.py
 wget -O strmpilegcam.py -q --show-progress https://raw.github.com/pageauc/motrack2/master/strmpilegcam.py
 wget -O strmusbipcam.py -q --show-progress https://raw.github.com/pageauc/motrack2/master/strmusbipcam.py
 wget -O strmpilibcam.py -q --show-progress https://raw.github.com/pageauc/motrack2/master/strmpilibcam.py
 wget -O Readme.md -q --show-progress https://raw.github.com/pageauc/motrack2/master/Readme.md
 wget -O media/webserver.txt -q --show-progress https://raw.github.com/pageauc/motrack2/master/webserver.txt
+
+if [ -f config.py ]; then     # check if local file exists.
+    wget -O config.py.new -q --show-progress https://raw.github.com/pageauc/motrack2/master/config.py
+else
+    wget -O config.py -q --show-progress https://raw.github.com/pageauc/motrack2/master/config.py
+fi
 
 chmod +x motrack2.py webserver.py webserver.sh
 
